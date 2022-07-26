@@ -97,7 +97,7 @@ function tinhToan() {
   );
 }
 function tinhTienDien(tagTienDien, tagDien, tagTen) {
-  if (tagDien < 50) {
+  if (tagDien <= 50) {
     tagTienDien = tagDien * 500;
   } else if (tagDien >= 200) {
     tagTienDien =
@@ -106,7 +106,7 @@ function tinhTienDien(tagTienDien, tagDien, tagTen) {
     tagTienDien = 50 * 500 + 50 * 650 + 50 * 850 + (tagDien - 150) * 1100;
   } else if (tagDien >= 100) {
     tagTienDien = 50 * 500 + 50 * 650 + (tagDien - 100) * 850;
-  } else if (tagDien >= 50) {
+  } else if (tagDien > 50) {
     tagTienDien = 50 * 500 + (tagDien - 50) * 650;
   }
   return "Tên : " + tagTen + "; Tiền điện : " + tagTienDien + " Đồng";
