@@ -88,7 +88,6 @@ function tinhToan() {
   let tagTen = dom2("ten");
   let tagDien = +dom2("dien");
   // console.log(tagDien);
-
   let tagTienDien = 0;
   document.getElementById(`ketQua2`).innerHTML = tinhTienDien(
     tagTienDien,
@@ -97,6 +96,8 @@ function tinhToan() {
   );
 }
 function tinhTienDien(tagTienDien, tagDien, tagTen) {
+  let currentFormat = new Intl.NumberFormat("vn-VN");
+
   if (tagDien <= 50) {
     tagTienDien = tagDien * 500;
   } else if (tagDien <= 100) {
@@ -110,7 +111,13 @@ function tinhTienDien(tagTienDien, tagDien, tagTen) {
       50 * 500 + 50 * 650 + 50 * 850 + 50 * 1100 + (tagDien - 200) * 1300;
   }
 
-  return "Tên : " + tagTen + "; Tiền điện : " + tagTienDien + " Đồng";
+  return (
+    "Tên : " +
+    tagTen +
+    "; Tiền điện : " +
+    currentFormat.format(tagTienDien) +
+    " Đồng"
+  );
 }
 //Đầu ra:
 //-Xuất ra output tên và số tiền điện
