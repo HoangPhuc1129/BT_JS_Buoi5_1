@@ -42,7 +42,7 @@ function checkKetQua(tagKetQua, tagDiemChuan, diemMon1, diemMon2, diemMon3) {
   if (diemMon1 === 0 || diemMon2 === 0 || diemMon3 === 0) {
     // document.getElementById("footer").innerHTML =
     //  " Bạn đã rớt.Do có điểm bằng 0" ;
-    return " Bạn đã rớt.Do có điểm bằng 0";
+    return " Bạn đã rớt. Do có điểm bằng 0 ";
   }
   // checkPointValid(diemMon1);
   if (
